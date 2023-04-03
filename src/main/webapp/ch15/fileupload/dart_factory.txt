@@ -1,0 +1,26 @@
+ //#########################팩토리 리스트에넣고풀기#######################
+
+      //----------------------------dto 부분----------------------------
+      // static List<PostDtoTable> fromJsonList(List jsonList){
+      //   return jsonList.map((json) => PostDtoTable.fromjson(json)).toList();
+      // }
+      //
+      // ----------------------------코드부분----------------------------
+      listState.value = PostDtoTable.fromJsonList(decodeBody);
+      //#############################팩토리해서풀기##########################
+      //
+      //----------------------------dto부분----------------------------
+      // factory PostDtoTable.fromjson(dynamic josn)=>
+      //           PostDtoTable(id: josn["id"], name: josn["name"], email: josn["email"]);
+      //
+      //----------------------------코드부분----------------------------
+      //   List jsonList = decodeBody as List;
+      // listState.value = jsonList
+      //     .map((data){
+      //         return PostDtoTable.fromjson(data);
+      //       })
+      //      .toList();
+          //
+          //######################################그냥풀기######################################
+          //.map((data){return PostDtoTable(id:data["id"], name:data["name"], email:data["email"]);})
+          //.toList();
