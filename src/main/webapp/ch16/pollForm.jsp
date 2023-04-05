@@ -1,22 +1,22 @@
-<!-- pollForm.jsp -->
 <%@page import="java.util.Vector"%>
 <%@page import="ch16.PollListBean"%>
 <%@page import="ch15.UtilMgr"%>
 <%@page contentType="text/html; charset=UTF-8"%>
-<jsp:useBean id="mgr" class="ch16.PollMgr"/>
-<%
-	int num = 0;
-	if(request.getParameter("num")!= null){
-		num = UtilMgr.parseInt(request, "num");
-	}
-	
-	PollListBean plBean = mgr.getPoll(num);
-	Vector<String> vItem = mgr.getItemList(num);
-	String question = plBean.getQuestion();
-	int type = plBean.getType();
-	int active = plBean.getActive();
-	int sumCount = 0;
+<jsp:useBean id="mgr" class = "ch16.PollMgr"/>
 
+<%
+   int num = 0; 
+   if(request.getParameter("num") != null){
+      num = UtilMgr.parseInt(request, "num");  
+   }
+   
+   PollListBean plBean = mgr.getPoll(num);
+   Vector<String> vItem = mgr.getItemList(num);
+   String question = plBean.getQuestion();
+   int type = plBean.getType();
+   int active = plBean.getActive();
+   int sumCount = mgr.sumCount(num); //미구현
+   //out.print(question  +" : " + vItem.size());
 %>
 
 <form action="pollFormProc.jsp"> 
