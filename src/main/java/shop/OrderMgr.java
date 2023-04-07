@@ -162,10 +162,10 @@ public class OrderMgr {
 		boolean flag = false;
 		try {
 			con = pool.getConnection();
-			sql = "delete tblOrder where no = ?";
+			sql = "delete from tblOrder where no = ?";
 			pstmt = con.prepareStatement(sql);
 			pstmt.setInt(1, no);
-			if(pstmt.executeUpdate()==1)flag = true;
+			if(pstmt.executeUpdate()==1) flag = true;
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
