@@ -1,0 +1,19 @@
+JSP 심플 쇼핑몰
+1.폴더 및 package : shop
+2.table.sql
+ - 3개 테이블(tblProduct, tblOrder, tblAdmin : admin /1234)
+ - 2개 테이블(tblMember, tblZipcode)
+3.4개의 Beans 만들기
+ - ProductBean.java, OrderBean.java
+ - MemberBean.java, ZipcodeBean.java <- copy
+4.MemberMgr.java, MailSend.java, UtilMgr.java 복사
+5.shop/data/4개의 이미지 복사
+6.로그인 및 회원관리 jsp(14개),css,js 복사
+7.상품정보 ProductMgr.java 구현
+8.장바구니 CartMgr.java 구현
+9.주문기능 OrderMgr.java 구현
+10.관리자 기능 jsp(15개), css, js 복사
+11.상품정보(관리자 기능) ProductMgr.java 구현
+12.장바구니(관리자 기능) CartMgr.java 구현
+13.주문기능(관리자 기능) OrderMgr.java 구현
+
